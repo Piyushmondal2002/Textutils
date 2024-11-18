@@ -72,11 +72,11 @@ export default function TextForm(props) {
         </div>
         <ul className="list-unstyled">
           <li>
-            <button className="btn btn-primary mx-2" onClick={handleUpCase}>Convert to Uppercase</button>
-            <button className="btn btn-primary mx-2" onClick={handleLoCase}>Convert to Lowercase</button>
-            <button className="btn btn-primary mx-2" onClick={clearText}>Clear Text</button>
-            <button className="btn btn-primary mx-2" onClick={copyText}>Copy Text</button>
-            <button className="btn btn-primary mx-2" onClick={ExtraSpace}>Remove Extra Spaces</button>
+            <button className="btn btn-primary mx-2 my-1" onClick={handleUpCase}>Convert to Uppercase</button>
+            <button className="btn btn-primary mx-2 my-1" onClick={handleLoCase}>Convert to Lowercase</button>
+            <button className="btn btn-primary mx-2 my-1" onClick={clearText}>Clear Text</button>
+            <button className="btn btn-primary mx-2 my-1" onClick={copyText}>Copy Text</button>
+            <button className="btn btn-primary mx-2 my-1" onClick={ExtraSpace}>Remove Extra Spaces</button>
           </li>
           <li className="my-2">
             <div className="d-flex">
@@ -116,8 +116,8 @@ export default function TextForm(props) {
       </div>
       <div className={`container ${props.mode === 'dark' ? 'text-white' : 'text-dark'}`}>
         <h3>Your Text Summary</h3>
-        <p>{text.split(/\s+/).filter(word => word.length > 0).length} words, {text.length} characters</p>
-        <p>{0.008 * text.split(/\s+/).filter(word => word.length > 0).length} minutes read</p>
+        <p>{text.split(" ").filter((element) => {return element.length!=0}).length} words, {text.length} characters</p> {/*one method of couting number of words*/}
+        <p>{0.008 * text.split(/\s+/).filter(word => word.length > 0).length} minutes read</p> {/*Another method of couting number of words*/}
         <h3>Preview</h3>
         <div 
           dangerouslySetInnerHTML={{
