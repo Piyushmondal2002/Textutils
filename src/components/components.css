@@ -1,0 +1,61 @@
+.alert-container {
+    margin-top: 0px;
+    margin-left: 500px;
+    padding:0px;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
+  
+.fixed-alert {
+    position: fixed;
+    top: 20px; /* Adjust to match your navbar height */
+    width: 30%;
+    z-index: 1050; /* Ensures it stays above content but below navbar */
+  }
+  
+  .mode-switcher-top {
+    position: absolute;
+    top: 70px; /* Adjust based on navbar height */
+    right: 10px; /* Aligns to the right */
+    z-index: 1000; /* Keeps it on top of other elements */
+  }
+  
+  
+  .colorPalette{
+    position: absolute;
+    top: 65px; /* Adjust based on navbar height */
+    right: 120px; /* Aligns to the right */
+    z-index: 1000; 
+  }
+
+  .colorPalette-btn1 {
+    margin-right: 10px;
+    border-radius: 60%;
+    background-color: blue;
+    border:none;
+    padding:12px;
+  }
+
+  .colorPalette-btn2 {
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: green;
+    border:none;
+    padding:12px;
+  }
+
+  .colorPalette-btn3 {
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color:red;
+    border:none;
+    padding:12px;
+  }
+
+  .colorPalette-btn4 {
+    margin-right: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    border:none;
+    padding:12px;
+  }
