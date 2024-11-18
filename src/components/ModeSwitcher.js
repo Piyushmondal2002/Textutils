@@ -1,33 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-
 export default function ModeSwitcher(props) {
- 
   return (
     <> 
-    <div>
-    <div className="colorPalette">
-          <button className="colorPalette-btn1" ></button>
-          <button className="colorPalette-btn2" ></button>
-          <button className="colorPalette-btn3" ></button>
-          <button className="colorPalette-btn4" ></button>
+      <div>
+        <div className="form-check form-switch d-flex justify-content-end mode-switcher-top">
+          <input 
+            className="form-check-input" 
+            type="checkbox" 
+            role="switch" 
+            id="flexSwitchCheckDefault" 
+            onClick={props.toggleMode}
+          />
+          <label className={`form-check-label mx-3 ${props.mode === 'dark' ? 'text-white' : 'text-dark'}`} htmlFor="flexSwitchCheckDefault">
+            {props.mode} mode
+          </label>
+        </div>
       </div>
-      <div className="form-check form-switch d-flex justify-content-end mode-switcher-top">
-
-        <input 
-          className="form-check-input" 
-          type="checkbox" 
-          role="switch" 
-          id="flexSwitchCheckDefault" 
-          onClick={props.toggleMode}
-        />
-        <label className={`form-check-label mx-3 ${props.mode === 'dark' ? 'text-white' : 'text-dark'}`} htmlFor="flexSwitchCheckDefault">
-          {props.mode} mode
-        </label>
-      </div>
-    </div>
-      
     </>
   )
 }
