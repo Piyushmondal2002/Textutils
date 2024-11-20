@@ -34,7 +34,7 @@ export default function About(props) {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body"  style={{
-          backgroundColor: props.mode === 'dark' ? '#095797' : 'white',
+          backgroundColor: props.mode === 'dark' ? 'rgb(4 92 165)' : 'white',
           color:  props.mode === 'dark' ? 'white' : 'black' }}>
                 <strong>TextUtils Overview:</strong> TextUtils is a versatile
                 application designed to simplify text manipulation tasks. With
@@ -66,7 +66,7 @@ export default function About(props) {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body"  style={{
-          backgroundColor: props.mode === 'dark' ? '#095797' : 'white',
+          backgroundColor: props.mode === 'dark' ? 'rgb(4 92 165)' : 'white',
           color:  props.mode === 'dark' ? 'white' : 'black' }} >
                 <strong>Main Functionalities:</strong> TextUtils offers a variety
                 of text manipulation options, such as changing text cases, counting
@@ -96,7 +96,7 @@ export default function About(props) {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body"  style={{
-          backgroundColor: props.mode === 'dark' ? '#095797' : 'white',
+          backgroundColor: props.mode === 'dark' ? 'rgb(4 92 165)' : 'white',
           color:  props.mode === 'dark' ? 'white' : 'black' }}>
                 <strong>Practical Applications:</strong> TextUtils can be used for
                 a variety of purposes, such as preparing written content for blogs,

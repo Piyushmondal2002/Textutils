@@ -23,6 +23,7 @@ export default function TextForm(props) {
 
   const copyText = () => {
     navigator.clipboard.writeText(text);
+    document.getSelection().removeAllRanges();
     alert("Text copied to clipboard!");
   };
 
@@ -116,7 +117,7 @@ export default function TextForm(props) {
       </div>
       <div className={`container ${props.mode === 'dark' ? 'text-white' : 'text-dark'}`}>
         <h3>Your Text Summary</h3>
-        <p>{text.split(" ").filter((element) => {return element.length!=0}).length} words, {text.length} characters</p> {/*one method of couting number of words*/}
+        <p>{text.split(/\s+/).filter((element) => {return element.length!==0}).length} words, {text.length} characters</p> {/*one method of couting number of words*/}
         <p>{0.008 * text.split(/\s+/).filter(word => word.length > 0).length} minutes read</p> {/*Another method of couting number of words*/}
         <h3>Preview</h3>
         <div 
@@ -132,3 +133,8 @@ export default function TextForm(props) {
 TextForm.propTypes = {
   heading: PropTypes.string,
 };
+
+
+//remember onClick requires function name not the function call .
+//(/\s+/) is written so that the one or more spaces(new lines included) is counted properly else if we wrote(" ")
+//it would act only for a space but not for more than one space .
